@@ -4,25 +4,17 @@ const Navbar = () => {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
   ];
+
   return (
-    <nav className="bg-white py-4 fixed w-full top-0 shadow-lg z-10">
-      <div className="container mx-auto flex items-center justify-between px-4">
-        <a
-          href="#"
-          className="text-indigo-600 text-2xl font-semibold"
-          title="Home"
-        >
+    <nav className="fixed w-full top-0 z-10 p-4">
+      <div className="container mx-auto flex items-center justify-between">
+        <a href="#" className="text-[#00C299] text-3xl font-bold" title="Home">
           Rishi
         </a>
-        <ul className="flex space-x-8">
+        <ul className="flex space-x-8 text-white">
           {navItems.map((item, index) => (
-            <li key={index}>
-              <a
-                href={item.href}
-                className="text-indigo-600 hover:text-gray-400 transition duration-200"
-              >
-                {item.label}
-              </a>
+            <li key={index} className="hover:text-[#00C299]">
+              <a href={item.href}>{item.label}</a>
             </li>
           ))}
         </ul>
