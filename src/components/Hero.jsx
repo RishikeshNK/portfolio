@@ -1,6 +1,32 @@
-import ReactTyped from "react-typed";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 
 const Hero = () => {
+  {
+    /* See https://github.com/mattboldt/typed.js */
+  }
+  const el = useRef(null);
+  const typed = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      strings: [
+        "Full-Stack Web Developer",
+        "Data Scientist",
+        "Quantitative Analyst",
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+    };
+
+    typed.current = new Typed(el.current, options);
+
+    return () => {
+      typed.current.destroy();
+    };
+  }, []);
+
   return (
     <header className="flex flex-col justify-center items-center text-white min-h-screen p-6 md:p-10">
       <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center mb-4">
@@ -10,18 +36,8 @@ const Hero = () => {
         </span>
       </h1>
       <p className="text-base sm:text-sm md:text-md lg:text-lg mb-4 text-center">
-        {" "}
         <span className="font-bold block mb-1">
-          <ReactTyped
-            strings={[
-              "Full-Stack Web Developer",
-              "Data Scientist",
-              "Quantitative Analyst",
-            ]}
-            typeSpeed={60}
-            backSpeed={30}
-            loop
-          />
+          <span ref={el}></span>
         </span>
         Crafting Digital Experiences, One Line of Code at a Time
       </p>
