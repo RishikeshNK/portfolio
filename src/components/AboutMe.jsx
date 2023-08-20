@@ -1,3 +1,5 @@
+import headshot from "../assets/rishi.jpg";
+
 // TODO: Abstract out the constant information i.e. About Me paragraphs
 const AboutMe = () => (
   <section className="flex flex-col min-h-screen text-gray-100 p-4 sm:p-6">
@@ -44,7 +46,7 @@ const AboutMe = () => (
       <div className="lg:w-1/3">
         <div className="flex justify-center">
           <img
-            src="./src/assets/rishi.jpg"
+            src={headshot}
             alt="headshot"
             className="rounded-full w-40 md:w-44 lg:w-48 h-auto mx-auto mb-4"
           />
