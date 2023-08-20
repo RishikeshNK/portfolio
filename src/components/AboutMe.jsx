@@ -39,8 +39,8 @@ const AboutMe = () => (
           .
         </p>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6">
-          When I&apos;m not at coding, I&apos;m usually working out, trying to
-          find the next multibagger stocks, or hanging out with my friends.
+          When I&apos;m not coding, I&apos;m usually working out, trying to find
+          the next multibagger stock, or hanging out with my friends!
         </p>
       </div>
       <div className="lg:w-1/3">
