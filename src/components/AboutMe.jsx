@@ -44,8 +44,8 @@ const AboutMe = () => (
       <div className="lg:w-1/3">
         <div className="flex justify-center">
           <img
-            src="src/assets/rishi.jpg"
-            alt="Rishikesh Kanabar"
+            src="./src/assets/rishi.jpg"
+            alt="headshot"
             className="rounded-full w-40 md:w-44 lg:w-48 h-auto mx-auto mb-4"
           />
         </div>
