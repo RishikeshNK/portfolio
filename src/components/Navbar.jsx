@@ -9,7 +9,7 @@ const Navbar = () => {
     /* TODO: Make the navigation bar sticky */
   }
   return (
-    <nav className="top-0 z-10 p-4">
+    <nav className="fixed top-0 left-0 right-0 z-10 p-3 backdrop-blur bg-opacity-50">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between">
           <a

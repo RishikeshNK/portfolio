@@ -35,7 +35,7 @@ const Hero = () => {
           Rishikesh Kanabar
         </span>
       </h1>
-      <p className="text-sm sm:text-base md:text-xl lg:text-2xl mb-2 sm:mb-3 text-center">
+      <p className="text-xs sm:text-sm md:text-base lg:text-lg mb-2 sm:mb-3 text-center">
         <span className="font-semibold block mb-1">
           <span ref={el}></span>
         </span>
