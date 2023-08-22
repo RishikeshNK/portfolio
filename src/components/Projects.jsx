@@ -16,7 +16,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={`Project ${index + 1}`}
-                className="mb-4 rounded-lg max-w-full"
+                className="mb-4 rounded-lg max-w-full w-64"
               />
             )}
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-center">
@@ -25,6 +25,11 @@ const Projects = () => {
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center">
               {project.description}
             </p>
+            <div className="mt-2">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center">
+                {project.technologies.join(" ⋅ ")}
+              </p>
+            </div>
             <div className="mt-2 flex gap-2 justify-center">
               {project.live && (
                 <a
