@@ -1,4 +1,5 @@
 import headshot from "../assets/rishi.jpg";
+import Skills from "./Skills";
 
 // TODO: Abstract out the constant information i.e. About Me paragraphs
 const AboutMe = () => (
@@ -56,6 +57,7 @@ const AboutMe = () => (
         </div>
       </div>
     </div>
+    <Skills />
   </section>
 );
 
