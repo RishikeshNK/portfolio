@@ -28,7 +28,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <header className="flex flex-col justify-center items-center text-white min-h-screen p-4 sm:p-6">
+    <header
+      className="flex flex-col justify-center items-center text-white min-h-screen p-4 sm:p-6"
+      id="top"
+    >
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-center mb-2 sm:mb-3">
         Hi! I am{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C299] to-[#0077B6]">

@@ -2,7 +2,10 @@ import headshot from "../assets/rishi.jpg";
 
 // TODO: Abstract out the constant information i.e. About Me paragraphs
 const AboutMe = () => (
-  <section className="flex flex-col min-h-screen text-gray-100 p-4 sm:p-6">
+  <section
+    className="flex flex-col min-h-screen text-gray-100 p-4 sm:p-6"
+    id="about-me"
+  >
     <div className="max-w-4xl mx-auto text-center lg:flex lg:items-center">
       <div className="lg:w-2/3">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-4">

@@ -2,7 +2,10 @@ import projects from "../constants/projects";
 
 const Projects = () => {
   return (
-    <div className="text-gray-100 flex flex-col items-center justify-center">
+    <div
+      className="text-gray-100 flex flex-col items-center justify-center"
+      id="projects"
+    >
       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
         Projects
       </h2>
@@ -10,7 +13,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="border border-gray-100 p-4 rounded-lg w-full flex flex-col items-center"
+            className="border border-gray-100 p-4 rounded-lg w-full flex flex-col items-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:shadow-gray-800"
           >
             {project.image && (
               <img
