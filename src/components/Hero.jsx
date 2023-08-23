@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const el = useRef(null);
@@ -45,12 +46,15 @@ const Hero = () => {
         Crafting Digital Experiences, One Line of Code at a Time
       </p>
       <nav className="border-t border-gray-600 pt-2 sm:pt-3 text-center">
-        <a
-          href="#projects"
+        <Link
+          to="projects"
+          smooth={true}
+          duration={600}
+          offset={-55}
           className="text-[#00C299] hover:text-[#c3eaff] text-sm sm:text-base md:text-lg lg:text-xl font-semibold transition duration-300"
         >
           Explore My Work
-        </a>
+        </Link>
       </nav>
     </header>
   );

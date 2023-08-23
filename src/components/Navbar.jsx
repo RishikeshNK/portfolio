@@ -6,6 +6,8 @@ const Navbar = () => {
     { label: "Projects", href: "projects" },
   ];
 
+  const resume = "src/assets/Rishikesh-Kanabar.pdf";
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 p-3 backdrop-blur bg-opacity-50">
       <div className="max-w-5xl mx-auto px-4">
@@ -26,11 +28,16 @@ const Navbar = () => {
                 key={index}
                 className="hover:text-[#00C299] hover:cursor-pointer duration-300 text-sm md:text-base lg:text-lg xl:text-xl"
               >
-                <Link to={item.href} smooth={true} duration={600} offset={-60}>
+                <Link to={item.href} smooth={true} duration={600} offset={-55}>
                   {item.label}
                 </Link>
               </li>
             ))}
+            <li className="hover:text-[#00C299] hover:cursor-pointer duration-300 text-sm md:text-base lg:text-lg xl:text-xl">
+              <a href={resume} download>
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
       </div>

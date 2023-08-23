@@ -2,11 +2,11 @@ import projects from "../constants/projects";
 
 const Projects = () => {
   return (
-    <div
-      className="text-gray-100 flex flex-col items-center justify-center"
-      id="projects"
-    >
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
+    <div className="text-gray-100 flex flex-col items-center justify-center">
+      <h2
+        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold"
+        id="projects"
+      >
         Projects
       </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-10 px-4">
