@@ -1,4 +1,5 @@
 import simutrade from "../assets/simutrade.jpg";
+import shrinkit from "../assets/shrinkit.png";
 
 const projects = [
   {
@@ -9,6 +10,21 @@ const projects = [
     live: null,
     code: "https://github.com/RishikeshNK/simutrade-api",
     technologies: ["ExpressJS", "MongoDB", "NodeJS", "JWT"],
+  },
+  {
+    image: shrinkit,
+    title: "ShrinkIt",
+    description: "Your links, trimmed and ready to share, in an instant.",
+    live: null,
+    code: "https://github.com/RishikeshNK/shrinkit",
+    technologies: [
+      "ExpressJS",
+      "MongoDB",
+      "NodeJS",
+      "ReactJS",
+      "TypeScript",
+      "ChakraUI",
+    ],
   },
 ];
 
