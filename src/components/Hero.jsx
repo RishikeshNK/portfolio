@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
+
 import Typed from "typed.js";
 import { Link } from "react-scroll";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   const el = useRef(null);
@@ -55,6 +57,27 @@ const Hero = () => {
         >
           Explore My Work
         </Link>
+        <div className="flex justify-center mt-2 sm:mt-3 space-x-4">
+          <a
+            href="https://github.com/RishikeshNK"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub className="text-xl sm:text-2xl text-white hover:text-[#00C299] transition duration-300 hover:cursor-pointer" />
+          </a>
+          <a
+            href="https://linkedin.com/in/rishikeshnk"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin className="text-xl sm:text-2xl text-white hover:text-[#00C299] transition duration-300 hover:cursor-pointer" />
+          </a>
+          <a href="mailto:rishikesh.kanabar@gmail.com" aria-label="Email">
+            <FaEnvelope className="text-xl sm:text-2xl text-white hover:text-[#00C299] transition duration-300 hover:cursor-pointer" />
+          </a>
+        </div>
       </nav>
     </header>
   );
