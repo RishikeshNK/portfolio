@@ -51,7 +51,7 @@ const Hero = () => {
           smooth={true}
           duration={600}
           offset={-55}
-          className="text-[#00C299] hover:text-[#c3eaff] text-sm sm:text-base md:text-lg lg:text-xl font-semibold transition duration-300"
+          className="text-[#00C299] hover:text-[#c3eaff] text-sm sm:text-base md:text-lg lg:text-xl font-semibold transition duration-300 hover:cursor-pointer"
         >
           Explore My Work
         </Link>
