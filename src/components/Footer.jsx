@@ -2,7 +2,7 @@ import { FaHeart } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto text-center text-white py-4">
+    <footer className="mt-auto text-center text-white py-4 text-xs sm:text-sm md:text-base lg:text-lg">
       Made with <FaHeart className="inline-block text-[#FF6B6B] mb-1" /> by{" "}
       <a
         className="font-semibold"
