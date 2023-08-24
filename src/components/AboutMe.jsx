@@ -40,6 +40,15 @@ const AboutMe = () => (
           >
             Ed-tech platform
           </a>
+          . At Northeastern, I am currently a Software Developer at{" "}
+          <a
+            className="font-semibold"
+            href="https://www.sandboxnu.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sandbox
+          </a>
           .
         </p>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6">
