@@ -9,6 +9,8 @@ import {
 } from "react-icons/di";
 import PropTypes from "prop-types";
 
+import { aboutMe } from "../styles";
+
 const Skills = () => {
   const skills = [
     { icon: <SiJavascript />, label: "JavaScript" },
@@ -34,11 +36,9 @@ const Skills = () => {
 // Skill Items
 const SkillItem = ({ icon, label }) => {
   return (
-    <div className="flex flex-col items-center p-2 group">
-      <div className="text-5xl mb-2">{icon}</div>
-      <div className="text-xs text-center opacity-0 group-hover:opacity-100 transition-opacity">
-        {label}
-      </div>
+    <div className="flex flex-col items-center text-center p-2 group">
+      <div className={`${aboutMe.iconSize} mb-2`}>{icon}</div>
+      <div className={aboutMe.techLabel}>{label}</div>
     </div>
   );
 };

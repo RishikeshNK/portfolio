@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import resume from "../assets/Rishikesh-Kanabar.pdf";
+import { base, navbar } from "../styles";
 
 const Navbar = () => {
   const navItems = [
@@ -16,7 +17,7 @@ const Navbar = () => {
             smooth={true}
             duration={600}
             offset={-80}
-            className="text-[#00C299] text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold tracking-tight hover:cursor-pointer"
+            className={`${navbar.primaryText} ${navbar.hoverPointer} ${navbar.navLogo}`}
             title="Home"
           >
             &lt;Rishi /&gt;
@@ -25,14 +26,14 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <li
                 key={index}
-                className="hover:text-[#00C299] hover:cursor-pointer duration-300 text-sm md:text-base lg:text-lg xl:text-xl"
+                className={`${base.hoverAnimation} ${navbar.navItem}`}
               >
                 <Link to={item.href} smooth={true} duration={600} offset={-55}>
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li className="hover:text-[#00C299] hover:cursor-pointer duration-300 text-sm md:text-base lg:text-lg xl:text-xl">
+            <li className={`${base.hoverAnimation} ${navbar.navItem}`}>
               <a href={resume} download>
                 Resume
               </a>
