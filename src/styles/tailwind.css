@@ -26,7 +26,7 @@ body {
 }
 
 .nav-item {
-  @apply text-sm md:text-base lg:text-lg xl:text-xl;
+  @apply text-lg xl:text-xl;
 }
 
 /* Hero */

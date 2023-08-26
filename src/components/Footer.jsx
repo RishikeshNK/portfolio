@@ -1,10 +1,12 @@
+import links from "../constants/links";
+
 const Footer = () => {
   return (
     <footer className="footer-text mt-auto text-center">
       Made by{" "}
       <a
         className="font-semibold"
-        href="https://www.linkedin.com/in/rishikeshnk"
+        href={links.LINKEDIN}
         target="_blank"
         rel="noreferrer"
       >
@@ -12,7 +14,7 @@ const Footer = () => {
       </a>{" "}
       |{" "}
       <a
-        href="https://github.com/RishikeshNK/portfolio"
+        href={links.SOURCE}
         target="_blank"
         rel="noopener noreferrer"
         className="link-text"

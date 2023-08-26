@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import links from "../constants/links";
+import roles from "../constants/roles";
 
 const Hero = () => {
   const el = useRef(null);
@@ -13,11 +15,7 @@ const Hero = () => {
       /* See https://github.com/mattboldt/typed.js */
     }
     const options = {
-      strings: [
-        "Full-Stack Web Developer",
-        "Data Scientist",
-        "Quantitative Analyst",
-      ],
+      strings: roles,
       typeSpeed: 60,
       backSpeed: 30,
       loop: true,
@@ -57,7 +55,7 @@ const Hero = () => {
         </Link>
         <div className="flex justify-center mt-2 sm:mt-3 space-x-4">
           <a
-            href="https://github.com/RishikeshNK"
+            href={links.GITHUB}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -65,14 +63,14 @@ const Hero = () => {
             <FaGithub className="icon-size hover-animation" />
           </a>
           <a
-            href="https://linkedin.com/in/rishikeshnk"
+            href={links.LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <FaLinkedin className="icon-size hover-animation" />
           </a>
-          <a href="mailto:rishikesh.kanabar@gmail.com" aria-label="Email">
+          <a href={links.EMAIL} aria-label="Email">
             <FaEnvelope className="icon-size hover-animation" />
           </a>
         </div>
