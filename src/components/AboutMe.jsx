@@ -1,16 +1,15 @@
 import headshot from "../assets/rishi.jpg";
 import Skills from "./Skills";
-import { base, aboutMe } from "../styles";
 
 // TODO: Abstract out the constant information i.e. About Me paragraphs
 const AboutMe = () => (
   <section className="flex flex-col min-h-screen text-gray-100 p-4 sm:p-6">
     <div className="max-w-4xl mx-auto text-center lg:flex lg:items-center">
       <div className="lg:w-2/3">
-        <h2 className={base.heading} id="about-me">
+        <h2 className="subheading" id="about-me">
           About Me
         </h2>
-        <p className={aboutMe.aboutText}>
+        <p className="about-text">
           I am a Computer Science and Mathematics major (Hons.) at{" "}
           <span className="font-semibold">Northeastern University</span> in
           Boston, MA. I&apos;m currently in my second year, actively seeking
@@ -19,7 +18,7 @@ const AboutMe = () => (
           <span className="font-semibold">January 2024</span> to{" "}
           <span className="font-semibold">June 2024</span>.
         </p>
-        <p className={aboutMe.aboutText}>
+        <p className="about-text">
           In the past, I&apos;ve had the priviledge of building softwares for an{" "}
           <a
             className="font-semibold"
@@ -49,7 +48,7 @@ const AboutMe = () => (
           </a>
           .
         </p>
-        <p className={aboutMe.aboutText}>
+        <p className="about-text">
           When I&apos;m not coding, I&apos;m usually working out, trying to find
           the next multibagger stock, or hanging out with my friends!
         </p>

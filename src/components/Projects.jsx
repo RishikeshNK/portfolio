@@ -1,11 +1,9 @@
 import projects from "../constants/projects";
 
-import { base, projectCard } from "../styles";
-
 const Projects = () => {
   return (
     <div className="text-gray-100 flex flex-col items-center justify-center">
-      <h2 className={base.heading} id="projects">
+      <h2 className="subheading" id="projects">
         Projects
       </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-10 px-4">
@@ -21,12 +19,10 @@ const Projects = () => {
                 className="mb-4 rounded-lg max-w-full w-64"
               />
             )}
-            <h3 className={projectCard.titleText}>{project.title}</h3>
-            <p className={projectCard.descriptionText}>{project.description}</p>
+            <h3 className="title-text">{project.title}</h3>
+            <p className="desc-text">{project.description}</p>
             <div className="mt-2">
-              <p className={projectCard.descriptionText}>
-                {project.technologies.join(" ⋅ ")}
-              </p>
+              <p className="desc-text">{project.technologies.join(" ⋅ ")}</p>
             </div>
             <div className="mt-2 flex gap-2 justify-center">
               {project.live && (
@@ -34,7 +30,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={projectCard.linkText}
+                  className="link-text"
                 >
                   Live
                 </a>
@@ -44,7 +40,7 @@ const Projects = () => {
                   href={project.code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={projectCard.linkText}
+                  className="link-text"
                 >
                   Code
                 </a>

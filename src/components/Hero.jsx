@@ -4,8 +4,6 @@ import Typed from "typed.js";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-import { base, hero } from "../styles";
-
 const Hero = () => {
   const el = useRef(null);
   const typed = useRef(null);
@@ -37,22 +35,22 @@ const Hero = () => {
       className="flex flex-col justify-center items-center text-white text-center min-h-screen p-4 sm:p-6"
       id="top"
     >
-      <h1 className={`${hero.heroText} ${hero.marginBottom}`}>
-        Hi! I am <span className={hero.heroGradient}>Rishikesh Kanabar</span>
+      <h1 className="hero-text margin-bottom">
+        Hi! I am <span className="hero-gradient">Rishikesh Kanabar</span>
       </h1>
-      <p className={`${hero.subText} ${hero.marginBottom}`}>
-        <span className={hero.typingText}>
+      <p className="hero-subtext margin-bottom">
+        <span className="typing-text">
           <span ref={el}></span>
         </span>
         Crafting Digital Experiences, One Line of Code at a Time
       </p>
-      <nav className={hero.separatorLine}>
+      <nav className="seperator-line">
         <Link
           to="projects"
           smooth={true}
           duration={600}
           offset={-55}
-          className={`${hero.projectsAnimation} ${hero.subText} font-semibold`}
+          className="projects-animation sub-text font-semibold"
         >
           Explore My Work
         </Link>
@@ -63,7 +61,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithub className={`${hero.iconSize} ${base.hoverAnimation}`} />
+            <FaGithub className="icon-size hover-animation" />
           </a>
           <a
             href="https://linkedin.com/in/rishikeshnk"
@@ -71,10 +69,10 @@ const Hero = () => {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedin className={`${hero.iconSize} ${base.hoverAnimation}`} />
+            <FaLinkedin className="icon-size hover-animation" />
           </a>
           <a href="mailto:rishikesh.kanabar@gmail.com" aria-label="Email">
-            <FaEnvelope className={`${hero.iconSize} ${base.hoverAnimation}`} />
+            <FaEnvelope className="icon-size hover-animation" />
           </a>
         </div>
       </nav>

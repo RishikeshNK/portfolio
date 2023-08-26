@@ -1,8 +1,6 @@
-import { footer } from "../styles";
-
 const Footer = () => {
   return (
-    <footer className={`${footer.footerText} mt-auto text-center`}>
+    <footer className="footer-text mt-auto text-center">
       Made by{" "}
       <a
         className="font-semibold"
@@ -17,7 +15,7 @@ const Footer = () => {
         href="https://github.com/RishikeshNK/portfolio"
         target="_blank"
         rel="noopener noreferrer"
-        className={footer.linkText}
+        className="link-text"
       >
         Source Code
       </a>

@@ -2,6 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Body */
 body {
   background-color: #121418;
+}
+
+/* Base */
+.hover-animation {
+  @apply hover:text-[#00C299] hover:cursor-pointer duration-300;
+}
+
+.subheading {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-4;
+}
+
+/* Navbar */
+.hover-pointer {
+  @apply hover:cursor-pointer;
+}
+
+.nav-logo {
+  @apply text-[#00C299] text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold tracking-tight;
+}
+
+.nav-item {
+  @apply text-sm md:text-base lg:text-lg xl:text-xl;
+}
+
+/* Hero */
+.margin-bottom {
+  @apply mb-2 sm:mb-3;
+}
+
+.hero-text {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold;
+}
+
+.hero-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#00C299] to-[#0077B6];
+}
+
+.hero-subtext {
+  @apply text-xs sm:text-sm md:text-base lg:text-lg;
+}
+
+.typing-text {
+  @apply font-semibold block mb-1;
+}
+
+.seperator-line {
+  @apply border-t border-gray-600 pt-2 sm:pt-3;
+}
+
+.projects-animation {
+  @apply text-[#00C299] hover:text-[#c3eaff] transition duration-300 hover:cursor-pointer;
+}
+
+.icon-size {
+  @apply text-xl sm:text-3xl;
+}
+
+/* About Me */
+.about-text {
+  @apply text-xs sm:text-sm md:text-base lg:text-lg mb-4;
+}
+
+.tech-label {
+  @apply text-xs opacity-0 group-hover:opacity-100 transition-opacity;
+}
+
+.tech-icon {
+  @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl;
+}
+
+/* Project Card */
+.title-text {
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl font-semibold;
+}
+
+.desc-text {
+  @apply text-xs sm:text-sm md:text-base lg:text-lg;
+}
+
+.link-text {
+  @apply text-[#00C299] hover:text-[#c3eaff] text-xs sm:text-sm md:text-base lg:text-lg font-semibold;
+}
+
+/* Footer */
+.footer-text {
+  @apply text-white py-4 text-xs sm:text-sm md:text-base lg:text-lg;
+}
+
+.link-text-footer {
+  @apply text-[#00C299] hover:text-[#c3eaff];
 }
