@@ -35,7 +35,7 @@ body {
 }
 
 .hero-text {
-  @apply text-4xl lg:text-5xl xl:text-6xl font-extrabold;
+  @apply text-3xl lg:text-4xl xl:text-5xl font-extrabold;
 }
 
 .hero-gradient {
@@ -43,7 +43,7 @@ body {
 }
 
 .hero-subtext {
-  @apply text-base lg:text-lg;
+  @apply text-sm lg:text-base xl:text-lg;
 }
 
 .typing-text {
