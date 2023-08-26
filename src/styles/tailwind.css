@@ -13,7 +13,7 @@ body {
 }
 
 .subheading {
-  @apply text-3xl lg:text-4xl xl:text-5xl font-semibold mb-4;
+  @apply text-2xl lg:text-3xl xl:text-4xl font-semibold mb-4;
 }
 
 /* Navbar */
