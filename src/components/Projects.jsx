@@ -10,7 +10,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="border border-gray-100 p-4 rounded-lg w-full flex flex-col items-center text-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:shadow-gray-800"
+            className="border border-gray-100 p-4 rounded-lg w-full flex flex-col items-center text-center transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:shadow-black"
           >
             {project.image && (
               <img
