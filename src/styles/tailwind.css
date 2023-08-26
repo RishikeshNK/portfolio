@@ -13,7 +13,7 @@ body {
 }
 
 .subheading {
-  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-4;
+  @apply text-3xl lg:text-4xl xl:text-5xl font-semibold mb-4;
 }
 
 /* Navbar */
@@ -35,7 +35,7 @@ body {
 }
 
 .hero-text {
-  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold;
+  @apply text-4xl lg:text-5xl xl:text-6xl font-extrabold;
 }
 
 .hero-gradient {
@@ -43,7 +43,7 @@ body {
 }
 
 .hero-subtext {
-  @apply text-xs sm:text-sm md:text-base lg:text-lg;
+  @apply text-base lg:text-lg;
 }
 
 .typing-text {
@@ -59,12 +59,12 @@ body {
 }
 
 .icon-size {
-  @apply text-xl sm:text-3xl;
+  @apply text-2xl md:text-3xl;
 }
 
 /* About Me */
 .about-text {
-  @apply text-xs sm:text-sm md:text-base lg:text-lg mb-4;
+  @apply text-sm md:text-base lg:text-lg mb-4;
 }
 
 .tech-label {
@@ -72,7 +72,7 @@ body {
 }
 
 .tech-icon {
-  @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl;
+  @apply text-4xl lg:text-5xl;
 }
 
 /* Project Card */

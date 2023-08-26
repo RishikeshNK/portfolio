@@ -36,7 +36,8 @@ const Hero = () => {
       id="top"
     >
       <h1 className="hero-text margin-bottom">
-        Hi! I am <span className="hero-gradient">Rishikesh Kanabar</span>
+        Hi! I am <br className="sm:hidden" />
+        <span className="hero-gradient">Rishikesh Kanabar</span>
       </h1>
       <p className="hero-subtext margin-bottom">
         <span className="typing-text">
