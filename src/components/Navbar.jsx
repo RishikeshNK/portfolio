@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import resume from "../Rishikesh-Kanabar.pdf";
+import resume from "../assets/Rishikesh-Kanabar.pdf"; // Fix the weird filename!
 
 const Navbar = () => {
   const navItems = [
