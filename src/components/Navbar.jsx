@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import resume from "../assets/Rishikesh-Kanabar.pdf";
+import resume from "../Rishikesh-Kanabar.pdf";
 
 const Navbar = () => {
   const navItems = [
