@@ -1,11 +1,12 @@
 import { Link } from "react-scroll";
-import resume from "../assets/Rishikesh-Kanabar.pdf"; // Fix the weird filename!
 
 const Navbar = () => {
   const navItems = [
     { label: "About Me", href: "about-me" },
     { label: "Projects", href: "projects" },
   ];
+
+  const resumeLink = "Rishikesh-Kanabar.pdf";
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 p-3 backdrop-blur bg-opacity-50">
@@ -30,7 +31,7 @@ const Navbar = () => {
               </li>
             ))}
             <li className="nav-item hover-animation">
-              <a href={resume} download>
+              <a href={resumeLink} download>
                 Resume
               </a>
             </li>
