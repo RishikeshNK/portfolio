@@ -10,7 +10,7 @@ const AboutMe = () => (
           About Me
         </h2>
         <p className="about-text">
-          I am a Computer Science and Mathematics major (Hons.) at{" "}
+          I am an Honors Computer Science and Mathematics major at{" "}
           <span className="font-semibold">Northeastern University</span> in
           Boston, MA. I&apos;m currently in my second year, actively seeking
           opportunities for co-ops and internships in the field of software
