@@ -35,7 +35,7 @@ const Hero = () => {
     >
       <h1 className="hero-text margin-bottom">
         Hi! I am <br className="sm:hidden" />
-        <span className="hero-gradient">Rishikesh Kanabar</span>
+        <span className="hero-gradient">Rishi Kanabar</span>
       </h1>
       <p className="hero-subtext margin-bottom">
         <span className="typing-text">
