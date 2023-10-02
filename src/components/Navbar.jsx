@@ -25,7 +25,7 @@ const Navbar = () => {
           <ul className="flex space-x-4 text-white">
             {navItems.map((item, index) => (
               <li key={index} className="nav-item hover-animation">
-                <Link to={item.href} smooth={true} duration={600} offset={-55}>
+                <Link to={item.href} smooth={true} duration={600} offset={-180}>
                   {item.label}
                 </Link>
               </li>
