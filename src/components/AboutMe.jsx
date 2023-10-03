@@ -3,7 +3,7 @@ import Skills from "./Skills";
 
 // TODO: Abstract out the constant information i.e. About Me paragraphs
 const AboutMe = () => (
-  <section className="flex flex-col min-h-screen text-gray-100 p-4 py-0 sm:p-6">
+  <section className="flex flex-col h-screen text-gray-100 p-4 py-0 sm:p-6">
     <div className="max-w-4xl mx-auto text-center lg:flex lg:items-center">
       <div className="lg:w-2/3">
         <h2 className="subheading" id="about-me">
