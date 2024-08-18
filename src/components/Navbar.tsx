@@ -16,7 +16,7 @@ const Navbar = () => {
             className="nav-logo hover-pointer"
             title="Home"
           >
-            &lt;Rishi /&gt;
+            &lt;RK /&gt;
           </Link>
           <ul className="flex space-x-4 text-white">
             {AppConfig.navItems.map((item, index) => (
