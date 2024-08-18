@@ -7,7 +7,7 @@ import {
   DiRust,
   DiGit,
 } from "react-icons/di";
-import PropTypes from "prop-types";
+import SkillItem from "./SkillItem";
 
 const Skills = () => {
   const skills = [
@@ -29,21 +29,6 @@ const Skills = () => {
       ))}
     </div>
   );
-};
-
-// Skill Items
-const SkillItem = ({ icon, label }) => {
-  return (
-    <div className="flex flex-col items-center text-center p-2 group">
-      <div className="tech-icon mb-2">{icon}</div>
-      <div className="tech-label">{label}</div>
-    </div>
-  );
-};
-
-SkillItem.propTypes = {
-  icon: PropTypes.element.isRequired,
-  label: PropTypes.string.isRequired,
 };
 
 export default Skills;

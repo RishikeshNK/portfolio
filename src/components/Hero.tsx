@@ -1,21 +1,20 @@
 import { useEffect, useRef } from "react";
 
+import { AppConfig } from "../utils/AppConfig";
+
 import Typed from "typed.js";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import links from "../constants/links";
-import roles from "../constants/roles";
 
 const Hero = () => {
-  const el = useRef(null);
-  const typed = useRef(null);
+  const el = useRef<HTMLElement | null>(null);
+  const typed = useRef<Typed | null>(null);
 
   useEffect(() => {
-    {
-      /* See https://github.com/mattboldt/typed.js */
-    }
+    // See https://github.com/mattboldt/typed.js
+
     const options = {
-      strings: roles,
+      strings: AppConfig.interests,
       typeSpeed: 60,
       backSpeed: 30,
       loop: true,
@@ -24,7 +23,9 @@ const Hero = () => {
     typed.current = new Typed(el.current, options);
 
     return () => {
-      typed.current.destroy();
+      if (typed.current) {
+        typed.current.destroy();
+      }
     };
   }, []);
 
@@ -41,21 +42,21 @@ const Hero = () => {
         <span className="typing-text">
           <span ref={el}></span>
         </span>
-        Crafting Digital Experiences, One Line of Code at a Time
+        {AppConfig.cheesyCatchPhrase}
       </p>
       <nav className="seperator-line">
         <Link
-          to="projects"
+          to="experiences"
           smooth={true}
           duration={600}
           offset={-55}
-          className="projects-animation sub-text font-semibold"
+          className="experience-animation sub-text font-semibold"
         >
-          Explore My Work
+          View My Experiences
         </Link>
         <div className="flex justify-center mt-2 sm:mt-3 space-x-4">
           <a
-            href={links.GITHUB}
+            href={AppConfig.socials.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -63,14 +64,14 @@ const Hero = () => {
             <FaGithub className="icon-size hover-animation" />
           </a>
           <a
-            href={links.LINKEDIN}
+            href={AppConfig.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <FaLinkedin className="icon-size hover-animation" />
           </a>
-          <a href={links.EMAIL} aria-label="Email">
+          <a href={AppConfig.socials.email} aria-label="Email">
             <FaEnvelope className="icon-size hover-animation" />
           </a>
         </div>

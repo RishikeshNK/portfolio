@@ -1,11 +1,7 @@
 import { Link } from "react-scroll";
+import { AppConfig } from "../utils/AppConfig";
 
 const Navbar = () => {
-  const navItems = [
-    { label: "About Me", href: "about-me" },
-    { label: "Projects", href: "projects" },
-  ];
-
   const resumeLink = "Rishi-Kanabar.pdf";
 
   return (
@@ -23,17 +19,15 @@ const Navbar = () => {
             &lt;Rishi /&gt;
           </Link>
           <ul className="flex space-x-4 text-white">
-            {navItems.map((item, index) => (
+            {AppConfig.navItems.map((item, index) => (
               <li key={index} className="nav-item hover-animation">
                 <Link to={item.href} smooth={true} duration={600} offset={-90}>
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li className="nav-item hover-animation">
-              <a href={resumeLink} download>
-                Resume
-              </a>
+            <li className="nav-item hover-animation font-bold">
+              <a href={resumeLink}>Resume</a>
             </li>
           </ul>
         </div>

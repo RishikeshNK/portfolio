@@ -54,7 +54,7 @@ body {
   @apply border-t border-gray-600 pt-2 sm:pt-3;
 }
 
-.projects-animation {
+.experience-animation {
   @apply text-[#00C299] hover:text-[#c3eaff] transition duration-300 hover:cursor-pointer;
 }
 
