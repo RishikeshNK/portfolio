@@ -7,7 +7,7 @@
 
 ### Description
 
-[kanabar.dev](https://kanabar.dev) is my personal portfolio website designed to provide an overview of my skills, projects, and professional experiences.
+[kanabar.dev](https://kanabar.dev) is my personal portfolio website designed to provide an overview of my skills, experiences, and professional experiences.
 
 ### Technologies Used
 
