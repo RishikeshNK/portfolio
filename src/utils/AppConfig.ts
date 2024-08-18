@@ -1,3 +1,6 @@
+import draftKings from "../assets/draftkings.jpg";
+import bainCapital from "../assets/baincapital.webp";
+
 export const AppConfig = {
   cheesyCatchPhrase: "Crafting Digital Experiences, One Line of Code at a Time",
   navItems: [
@@ -13,13 +16,13 @@ export const AppConfig = {
   work: [
     {
       company: "DraftKings",
-      image: "src/assets/draftkings.jpg",
+      image: draftKings,
       title: "Software Engineer Intern",
       dates: "June 2024 - August 2024",
     },
     {
       company: "Bain Capital",
-      image: "src/assets/baincapital.webp",
+      image: bainCapital,
       title: "Applications Developer Co-op",
       dates: "January 2024 - May 2024",
     },

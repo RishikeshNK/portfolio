@@ -1,6 +1,6 @@
 import { AppConfig } from "../utils/AppConfig";
 
-const Projects = () => {
+const Experiences = () => {
   return (
     <div className="text-gray-100 flex flex-col items-center justify-center">
       <h2 className="subheading" id="experiences">
@@ -28,4 +28,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Experiences;
