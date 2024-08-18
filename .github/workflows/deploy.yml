@@ -1,9 +1,12 @@
-name: Deploy
+name: Build and Deploy
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -14,14 +17,19 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build project
-        run: npm run build
+      - name: Install and Build
+        run: |
+          pnpm install
+          pnpm build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
