@@ -26,7 +26,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="nav-item hover-animation font-bold">
+            <li className="nav-item hover-animation">
               <a href={resumeLink}>Resume</a>
             </li>
           </ul>
