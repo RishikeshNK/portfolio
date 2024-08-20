@@ -7,7 +7,7 @@
 
 ### Description
 
-[kanabar.dev](https://kanabar.dev) is my personal portfolio website designed to provide an overview of my skills, experiences, and professional experiences.
+[kanabar.dev](https://kanabar.dev) is my personal portfolio website designed to provide an overview of my skills and professional experiences.
 
 ### Technologies Used
 
@@ -27,8 +27,8 @@ git clone git@github.com:RishikeshNK/portfolio.git
 cd portfolio
 
 # Install the dependencies:
-npm install
+pnpm install
 
 # Run the project:
-npm run dev
+pnpm dev
 ```
