@@ -1,0 +1,111 @@
+---
+import { LINKS } from "./constants";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rishi Kanabar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #fafaf8;
+        --text: #1a1a1a;
+        --muted: #777;
+        --link: #1a1a1a;
+      }
+
+      html,
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Lora", Georgia, serif;
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      main {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 80px 24px 120px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        margin-bottom: 28px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: #bbb;
+        transition: text-decoration-color 0.15s;
+      }
+
+      a:hover {
+        text-decoration-color: var(--link);
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 36px 0;
+      }
+
+      footer {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Rishi Kanabar</h1>
+
+      <p>
+        Hi, I'm Rishi. I work on the Racing product at
+        <a href={LINKS.draftkings} target="_blank" rel="noopener">DraftKings</a
+        >. I studied Computer Science and Mathematics.
+      </p>
+
+      <p>
+        More on my work in my <a
+          href={LINKS.resume}
+          target="_blank"
+          rel="noopener">resume</a
+        >.
+      </p>
+
+      <hr />
+
+      <footer>
+        <a href={`mailto:${LINKS.email}`}>rishi [at] kanabar.dev</a> &nbsp;&middot;&nbsp;
+        <a href={LINKS.github} target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
+        <a href={LINKS.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+      </footer>
+    </main>
+  </body>
+</html>
