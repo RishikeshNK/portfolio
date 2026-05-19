@@ -1,43 +1,30 @@
-# Astro Starter Kit: Minimal
+# kanabar.dev
 
-```sh
-bun create astro@latest -- --template minimal
-```
+Personal website built with [Astro](https://astro.build). Live at [kanabar.dev](https://kanabar.dev).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
 ```text
 /
 ├── public/
+│   └── CNAME
 ├── src/
+│   ├── constants.ts
 │   └── pages/
 │       └── index.astro
+├── astro.config.mjs
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Commands
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Command        | Action                                      |
+| :------------- | :------------------------------------------ |
+| `bun install`  | Install dependencies                        |
+| `bun dev`      | Start local dev server at `localhost:4321`  |
+| `bun build`    | Build production site to `./dist/`          |
+| `bun preview`  | Preview production build locally            |
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Deployment
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Deployed to GitHub Pages via GitHub Actions on every push to `main`.
