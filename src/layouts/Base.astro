@@ -105,6 +105,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         html {
           scroll-behavior: smooth;
         }
+
+        @view-transition {
+          navigation: auto;
+        }
       }
 
       ::selection {
@@ -266,6 +270,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       .footnotes li:target,
       [data-footnote-ref]:target {
         background: var(--highlight);
+      }
+
+      .post hr {
+        border: none;
+        text-align: center;
+        margin: 32px 0;
+      }
+
+      .post hr::after {
+        content: "···";
+        font-size: 1.4rem;
+        color: var(--muted);
+        letter-spacing: 0.6em;
+        padding-left: 0.6em;
       }
 
       .masthead {
