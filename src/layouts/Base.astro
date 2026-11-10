@@ -71,6 +71,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         --underline: #bbb;
         --border: #ddd;
         --code-bg: #f0efeb;
+        --highlight: #f1e6c8;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -82,6 +83,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           --underline: #555;
           --border: #333;
           --code-bg: #242321;
+          --highlight: #3d3524;
         }
 
         .astro-code,
@@ -97,6 +99,23 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         font-family: "Lora", Georgia, serif;
         font-size: 17px;
         line-height: 1.75;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+
+      ::selection {
+        background: var(--highlight);
+        color: var(--text);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--muted);
+        outline-offset: 3px;
+        border-radius: 2px;
       }
 
       main {
@@ -231,6 +250,35 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       [data-footnote-ref] {
         text-decoration: none;
         padding: 0 0.1em;
+      }
+
+      :target {
+        scroll-margin-top: 24px;
+      }
+
+      .footnotes li {
+        padding: 2px 6px;
+        margin-left: -6px;
+        border-radius: 3px;
+        transition: background-color 0.3s;
+      }
+
+      .footnotes li:target,
+      [data-footnote-ref]:target {
+        background: var(--highlight);
+      }
+
+      .masthead {
+        display: inline-block;
+        font-size: 0.82rem;
+        color: var(--muted);
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 480px) {
+        main {
+          padding: 48px 24px 80px;
+        }
       }
 
       .footnotes {

@@ -15,6 +15,7 @@ const { Content } = await render(post);
 ---
 
 <Base title={`${post.data.title} · Rishi Kanabar`} description={post.data.description} publishedAt={post.data.date}>
+  <a class="masthead" href="/">Rishi Kanabar</a>
   <h1>{post.data.title}</h1>
   <p class="muted">{formatDate(post.data.date, "long")} · {readingTime(post.body)}</p>
 
