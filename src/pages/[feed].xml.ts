@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
-import { getCollection } from "astro:content";
-import { WRITING_ENABLED } from "../constants";
+import { NAME, WRITING_ENABLED } from "../constants";
+import { getPosts } from "../posts";
 
 export function getStaticPaths() {
   return WRITING_ENABLED ? [{ params: { feed: "rss" } }] : [];
@@ -10,10 +10,7 @@ const escape = (s: string) =>
   s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 export const GET: APIRoute = async ({ site }) => {
-  const posts = (await getCollection("writing", (p) => !p.data.draft)).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-  );
-  const items = posts
+  const items = (await getPosts())
     .map((post) => {
       const link = new URL(`/writing/${post.id}`, site).href;
       return `<item>
@@ -30,9 +27,9 @@ export const GET: APIRoute = async ({ site }) => {
     `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>Rishi Kanabar</title>
+<title>${NAME}</title>
 <link>${new URL("/writing", site).href}</link>
-<description>Writing by Rishi Kanabar</description>
+<description>Writing by ${NAME}</description>
 ${items}
 </channel>
 </rss>

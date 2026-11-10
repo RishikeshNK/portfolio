@@ -1,19 +1,17 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import { WRITING_ENABLED } from "../../constants";
 import { formatDate, readingTime } from "../../format";
+import { getPosts } from "../../posts";
 
 export function getStaticPaths() {
   return WRITING_ENABLED ? [{ params: { index: undefined } }] : [];
 }
 
-const posts = (await getCollection("writing", (p) => !p.data.draft)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+const posts = await getPosts();
 ---
 
-<Base title="Writing · Rishi Kanabar">
+<Base title="Writing">
   <h1>Writing</h1>
 
   <ul class="posts">

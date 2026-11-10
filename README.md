@@ -10,13 +10,17 @@ Personal website built with [Astro](https://astro.build). Live at [kanabar.dev](
 │   ├── CNAME
 │   └── favicon.svg
 ├── src/
-│   ├── constants.ts          # links + WRITING_ENABLED flag
+│   ├── constants.ts          # name, links + WRITING_ENABLED flag
 │   ├── content.config.ts     # writing collection schema
 │   ├── content/writing/      # blog posts (markdown)
-│   ├── layouts/Base.astro    # shared head + styles
+│   ├── posts.ts              # getPosts() for pages + RSS
+│   ├── format.ts             # date + reading time
+│   ├── styles/global.css     # all styles
+│   ├── layouts/Base.astro    # shared <head> + meta tags
 │   └── pages/
 │       ├── index.astro
 │       ├── 404.astro
+│       ├── [feed].xml.ts     # /rss.xml
 │       └── writing/
 ├── astro.config.mjs
 └── package.json

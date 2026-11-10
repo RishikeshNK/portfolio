@@ -1,3 +1,5 @@
+export const NAME = "Rishi Kanabar";
+
 export const LINKS = {
     email: "rishi@kanabar.dev",
     github: "https://github.com/RishikeshNK",

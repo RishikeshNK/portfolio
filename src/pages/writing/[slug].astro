@@ -1,21 +1,20 @@
 ---
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import { WRITING_ENABLED } from "../../constants";
+import { NAME } from "../../constants";
 import { formatDate, readingTime } from "../../format";
+import { getPosts } from "../../posts";
 
 export async function getStaticPaths() {
-  if (!WRITING_ENABLED) return [];
-  const posts = await getCollection("writing", (p) => !p.data.draft);
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  return (await getPosts()).map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
 
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Base title={`${post.data.title} · Rishi Kanabar`} description={post.data.description} publishedAt={post.data.date}>
-  <a class="masthead" href="/">Rishi Kanabar</a>
+<Base title={post.data.title} description={post.data.description} publishedAt={post.data.date}>
+  <a class="masthead" href="/">{NAME}</a>
   <h1>{post.data.title}</h1>
   <p class="muted">{formatDate(post.data.date, "long")} · {readingTime(post.body)}</p>
 

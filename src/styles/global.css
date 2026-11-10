@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #fafaf8;
+  --text: #1a1a1a;
+  --muted: #777;
+  --underline: #bbb;
+  --border: #ddd;
+  --code-bg: #f0efeb;
+  --highlight: #f1e6c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171716;
+    --text: #e8e6e1;
+    --muted: #999;
+    --underline: #555;
+    --border: #333;
+    --code-bg: #242321;
+    --highlight: #3d3524;
+  }
+
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+  }
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Lora", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--muted);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+:target {
+  scroll-margin-top: 24px;
+}
+
+main {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 28px;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  margin: 32px 0 12px;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--underline);
+  transition: text-decoration-color 0.15s;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 36px 0;
+}
+
+footer,
+.muted {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+h1 + .muted {
+  margin-top: -20px;
+  margin-bottom: 28px;
+}
+
+.masthead {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  padding-left: 1.4em;
+  margin-bottom: 16px;
+}
+
+blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 16px;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-size: 0.85em;
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: var(--code-bg) !important;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 14px 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+.post hr {
+  border: none;
+  text-align: center;
+  margin: 32px 0;
+}
+
+.post hr::after {
+  content: "···";
+  font-size: 1.4rem;
+  color: var(--muted);
+  letter-spacing: 0.6em;
+  padding-left: 0.6em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+sup {
+  line-height: 0;
+}
+
+[data-footnote-ref] {
+  text-decoration: none;
+  padding: 0 0.1em;
+}
+
+.footnotes {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footnotes li {
+  padding: 2px 6px;
+  margin-left: -6px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.footnotes p {
+  margin-bottom: 8px;
+}
+
+.footnotes li:target,
+[data-footnote-ref]:target {
+  background: var(--highlight);
+}
+
+[data-footnote-backref] {
+  font-size: 0;
+}
+
+[data-footnote-backref]::after {
+  content: "back";
+  font-size: 0.82rem;
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+}
+
+.posts li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.posts span {
+  white-space: nowrap;
+}
+
+.posts p {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 48px 24px 80px;
+  }
+
+  .posts li {
+    grid-template-columns: 1fr;
+  }
+}
