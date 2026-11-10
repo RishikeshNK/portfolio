@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { WRITING_ENABLED } from "../../constants";
+
+export async function getStaticPaths() {
+  if (!WRITING_ENABLED) return [];
+  const posts = await getCollection("writing", (p) => !p.data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<Base title={`${post.data.title} · Rishi Kanabar`}>
+  <h1>{post.data.title}</h1>
+  <p class="muted">{date}</p>
+
+  <Content />
+
+  <hr />
+
+  <footer><a href="/writing">More writing</a></footer>
+</Base>

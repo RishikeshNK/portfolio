@@ -1,0 +1,207 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const {
+  title,
+  description = "Rishi Kanabar is a Software Engineer at Rilla, building the most fun way to get better at sales.",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rishi Kanabar" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        color-scheme: light dark;
+        --bg: #fafaf8;
+        --text: #1a1a1a;
+        --muted: #777;
+        --link: #1a1a1a;
+        --underline: #bbb;
+        --border: #ddd;
+        --code-bg: #f0efeb;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #171716;
+          --text: #e8e6e1;
+          --muted: #999;
+          --link: #e8e6e1;
+          --underline: #555;
+          --border: #333;
+          --code-bg: #242321;
+        }
+
+        .astro-code,
+        .astro-code span {
+          color: var(--shiki-dark) !important;
+        }
+      }
+
+      html,
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Lora", Georgia, serif;
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      main {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 80px 24px 120px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        margin-bottom: 28px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: var(--underline);
+        transition: text-decoration-color 0.15s;
+      }
+
+      a:hover {
+        text-decoration-color: var(--link);
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 36px 0;
+      }
+
+      footer,
+      .muted {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      h1 + .muted {
+        margin-top: -20px;
+        margin-bottom: 28px;
+      }
+
+      h2,
+      h3 {
+        font-weight: 500;
+        margin: 32px 0 12px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.4em;
+        margin-bottom: 16px;
+      }
+
+      blockquote {
+        border-left: 2px solid var(--border);
+        padding-left: 16px;
+        margin-bottom: 16px;
+        color: var(--muted);
+      }
+
+      blockquote p {
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      code {
+        font-size: 0.85em;
+        background: var(--code-bg);
+        padding: 0.1em 0.3em;
+        border-radius: 3px;
+      }
+
+      pre {
+        background-color: var(--code-bg) !important;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        padding: 14px 16px;
+        border-radius: 4px;
+        overflow-x: auto;
+        margin-bottom: 16px;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+      }
+
+      .posts {
+        list-style: none;
+        padding: 0;
+      }
+
+      .posts li {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 8px;
+      }
+
+      .posts .muted {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

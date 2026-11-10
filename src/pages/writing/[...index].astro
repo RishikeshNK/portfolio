@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { WRITING_ENABLED } from "../../constants";
+
+export function getStaticPaths() {
+  return WRITING_ENABLED ? [{ params: { index: undefined } }] : [];
+}
+
+const posts = (await getCollection("writing", (p) => !p.data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
+---
+
+<Base title="Writing · Rishi Kanabar">
+  <h1>Writing</h1>
+
+  <ul class="posts">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/writing/${post.id}`}>{post.data.title}</a>
+          <span class="muted">{fmt(post.data.date)}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <hr />
+
+  <footer><a href="/">Home</a></footer>
+</Base>

@@ -2,6 +2,8 @@ export const LINKS = {
     email: "rishi@kanabar.dev",
     github: "https://github.com/RishikeshNK",
     linkedin: "https://linkedin.com/in/rishikeshnk",
-    resume: "https://drive.google.com/file/d/1gCBbJkiaquo5ALSAKQSDJSv_TRrDJTwI/view?usp=sharing",
     rilla: "https://www.rilla.com",
 };
+
+const PUBLISH_WRITING = false;
+export const WRITING_ENABLED = PUBLISH_WRITING || import.meta.env.DEV;
