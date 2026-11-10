@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import { WRITING_ENABLED } from "../../constants";
+import { formatDate, readingTime } from "../../format";
 
 export async function getStaticPaths() {
   if (!WRITING_ENABLED) return [];
@@ -11,17 +12,11 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const date = post.data.date.toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-  timeZone: "UTC",
-});
 ---
 
-<Base title={`${post.data.title} · Rishi Kanabar`}>
+<Base title={`${post.data.title} · Rishi Kanabar`} description={post.data.description}>
   <h1>{post.data.title}</h1>
-  <p class="muted">{date}</p>
+  <p class="muted">{formatDate(post.data.date, "long")} · {readingTime(post.body)}</p>
 
   <Content />
 
