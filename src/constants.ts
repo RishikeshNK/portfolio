@@ -7,5 +7,5 @@ export const LINKS = {
     rilla: "https://www.rilla.com",
 };
 
-const PUBLISH_WRITING = false;
+const PUBLISH_WRITING = true;
 export const WRITING_ENABLED = PUBLISH_WRITING || import.meta.env.DEV;
